@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EOQ Surtialimentos CP</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+<body>
+  <h1>Modelos EOQ — Surtialimentos CP</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('clasico')">EOQ Clásico</button>
+    <button class="tab-btn" onclick="switchTab('estocastico')">EOQ Estocástico</button>
+  </div>
+
+  <!-- Panel EOQ Clásico -->
+  <div id="panel-clasico" class="panel active">
+    <div class="controls">
+      <label>Producto:</label>
+      <select id="sel-clasico" onchange="drawClasico()"></select>
+    </div>
+    <div id="metrics-clasico" class="metrics"></div>
+    <div class="chart-wrap">
+      <canvas id="chart-clasico"></canvas>
+    </div>
+    <div class="legend">
+      <span><span class="leg-box" style="background:#378ADD;"></span>Nivel de inventario</span>
+      <span><span class="leg-dash"></span>Inventario promedio (Q/2)</span>
+    </div>
+  </div>
+
+  <!-- Panel EOQ Estocástico -->
+  <div id="panel-estocastico" class="panel">
+    <div class="controls">
+      <label>Producto:</label>
+      <select id="sel-esto" onchange="drawEstocastico()"></select>
+    </div>
+    <div id="metrics-esto" class="metrics"></div>
+    <div class="chart-wrap">
+      <canvas id="chart-esto"></canvas>
+    </div>
+    <div class="legend">
+      <span><span class="leg-box" style="background:#378ADD;"></span>Nivel de inventario</span>
+      <span><span class="leg-dash" style="background:#D85A30;"></span>Punto de reorden (ROP)</span>
+      <span><span class="leg-dash" style="background:#1D9E75;"></span>Stock de seguridad</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
