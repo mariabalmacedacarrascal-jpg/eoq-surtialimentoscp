@@ -24,7 +24,7 @@ const productos = [
   { nombre: "Plátano verde",      D: 6.1285, sigma: 3.9889, EOQ: 6.6177, ROP: 21.5649, SS: 9.3080  },
   { nombre: "Ajo criollo",        D: 0.7912, sigma: 0.4725, EOQ: 2.3777, ROP: 2.6849,  SS: 1.1026  },
   { nombre: "Cilantro",           D: 1.4110, sigma: 0.8808, EOQ: 2.8634, ROP: 4.8772,  SS: 2.0552  },
-  { nombre: "Apio por rama",      D: 0.9509, sigma: 0.6746, EOQ: 2.3506, ROP: 3.4759,  SS: 1.5741  },
+  { nombre: "Apio",               D: 0.9509, sigma: 0.6746, EOQ: 2.3506, ROP: 3.4759,  SS: 1.5741  },
   { nombre: "Aguacate papelillo", D: 0.9000, sigma: 0.4958, EOQ: 2.5360, ROP: 2.9570,  SS: 1.1570  },
   { nombre: "Coco",               D: 0.7824, sigma: 0.4277, EOQ: 2.3645, ROP: 2.5627,  SS: 0.9980  },
   { nombre: "Mazorca",            D: 2.8649, sigma: 2.8723, EOQ: 4.0801, ROP: 12.4322, SS: 6.7024  },
