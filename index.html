@@ -11,8 +11,9 @@
   <h1>Modelos EOQ — Surtialimentos CP</h1>
 
   <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('clasico')">EOQ Clásico</button>
-    <button class="tab-btn" onclick="switchTab('estocastico')">EOQ Estocástico</button>
+    <button id="btn-clasico" class="tab-btn active" onclick="switchTab('clasico')">EOQ Clásico</button>
+    <button id="btn-esto"    class="tab-btn"        onclick="switchTab('esto')">EOQ Estocástico</button>
+    <button id="btn-comp"    class="tab-btn"        onclick="switchTab('comp')">Comparativo</button>
   </div>
 
   <!-- Panel EOQ Clásico -->
@@ -32,7 +33,7 @@
   </div>
 
   <!-- Panel EOQ Estocástico -->
-  <div id="panel-estocastico" class="panel">
+  <div id="panel-esto" class="panel">
     <div class="controls">
       <label>Producto:</label>
       <select id="sel-esto" onchange="drawEstocastico()"></select>
@@ -45,6 +46,23 @@
       <span><span class="leg-box" style="background:#378ADD;"></span>Nivel de inventario</span>
       <span><span class="leg-dash" style="background:#D85A30;"></span>Punto de reorden (ROP)</span>
       <span><span class="leg-dash" style="background:#1D9E75;"></span>Stock de seguridad</span>
+    </div>
+  </div>
+
+  <!-- Panel Comparativo -->
+  <div id="panel-comp" class="panel">
+    <div class="controls">
+      <label>Producto:</label>
+      <select id="sel-comp" onchange="drawComparativo()"></select>
+    </div>
+    <div id="metrics-comp" class="metrics"></div>
+    <div class="chart-wrap">
+      <canvas id="chart-comp"></canvas>
+    </div>
+    <div class="legend">
+      <span><span class="leg-box" style="background:#378ADD;"></span>Pérdida (kg)</span>
+      <span><span class="leg-box" style="background:#D85A30;"></span>Tasa de consumo (kg)</span>
+      <span><span class="leg-dash"></span>ROP</span>
     </div>
   </div>
 
